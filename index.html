@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web APIs Interactive Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Web APIs Interactive Demo</h1>
+
+    <!-- Geolocation API -->
+    <div class="api-section">
+      <h2>Geolocation</h2>
+      <button id="get-location">Get My Location</button>
+      <p class="output" id="location-info">Your location will appear here.</p>
+    </div>
+
+    <!-- Battery Status API -->
+    <div class="api-section">
+      <h2>Battery Status</h2>
+      <p id="battery-level">Battery Level: Loading...</p>
+      <p id="battery-status">Charging Status: Loading...</p>
+    </div>
+
+    <!-- Clipboard API -->
+    <div class="api-section">
+      <h2>Clipboard</h2>
+      <input type="text" id="clipboard-input" placeholder="Type text to copy">
+      <button id="copy-btn">Copy to Clipboard</button>
+      <button id="paste-btn">Paste from Clipboard</button>
+      <p class="output" id="paste-result"></p>
+    </div>
+
+    <!-- Device Orientation API -->
+    <div class="api-section">
+      <h2>Device Orientation</h2>
+      <p id="orientation">Tilt your device to see the orientation!</p>
+    </div>
+
+    <!-- Network Information & Status -->
+    <div class="api-section">
+      <h2>Network Information</h2>
+      <p id="network-status">Your network status will appear here.</p>
+    </div>
+
+    <!-- Fullscreen API -->
+    <div class="api-section">
+      <h2>Fullscreen</h2>
+      <button id="enter-fullscreen">Enter Fullscreen</button>
+    </div>
+
+    <!-- Web Share API -->
+    <div class="api-section">
+      <h2>Web Share</h2>
+      <button id="share-btn">Share This Page</button>
+    </div>
+
+    <!-- Vibration API -->
+    <div class="api-section">
+      <h2>Vibration</h2>
+      <label for="vibration-frequency">Frequency (ms):</label>
+      <input type="number" id="vibration-frequency" min="100" value="200">
+      <button id="vibrate-btn">Vibrate Device</button>
+    </div>
+
+    <!-- Web Notification API -->
+    <div class="api-section">
+      <h2>Notifications</h2>
+      <button id="notify-btn">Show Notification</button>
+    </div>
+
+    <!-- Media Device Access -->
+    <div class="api-section">
+      <h2>Web Camera Access</h2>
+      <button id="start-camera">Start Camera Stream</button>
+      <video id="camera-stream" class="video-stream" autoplay playsinline></video>
+    </div>
+
+    <!-- Speech Recognition API -->
+    <div class="api-section">
+      <h2>Speech Recognition</h2>
+      <button id="start-speech">Start Speech Recognition</button>
+      <p id="speech-result">Your speech result will appear here.</p>
+    </div>
+
+    <!-- Speech Synthesis API -->
+    <div class="api-section">
+      <h2>Speech Synthesis</h2>
+      <input type="text" id="speak-text" placeholder="Type something to speak">
+      <button id="speak-btn">Speak Text</button>
+    </div>
+
+    <!-- Web Bluetooth API -->
+    <div class="api-section">
+      <h2>Web Bluetooth</h2>
+      <button id="bluetooth-btn">Connect to Bluetooth Device</button>
+    </div>
+    
+    <!-- Device Motion API -->
+    <div class="api-section">
+      <h2>Device Motion</h2>
+      <p id="motion-data">Motion data will appear here.</p>
+    </div>
+  
+    <!-- Network Speed Test (Approximation) -->
+    <div class="api-section">
+      <h2>Network Speed Test</h2>
+      <button id="test-network-speed">Test Network Speed</button>
+      <p class="output" id="speed-result">Your network speed will appear here.</p>
+    </div>
+
+    <!-- Local Storage API -->
+    <div class="api-section">
+      <h2>Local Storage</h2>
+      <input type="text" id="local-storage-input" placeholder="Enter text to store">
+      <button id="store-local-storage">Store in Local Storage</button>
+      <button id="retrieve-local-storage">Retrieve from Local Storage</button>
+      <p class="output" id="local-storage-output">Local Storage Value: </p>
+    </div>
+
+    <!-- Canvas API -->
+    <div class="api-section">
+      <h2>Canvas</h2>
+      <canvas id="myCanvas" width="200" height="100"></canvas>
+      <button id="draw-on-canvas">Draw on Canvas</button>
+    </div>
+
+    <!-- Web Workers API -->
+    <div class="api-section">
+      <h2>Web Workers</h2>
+      <button id="start-web-worker">Start Web Worker</button>
+      <p id="web-worker-result">Web Worker Output: </p>
+    </div>
+
+    <!-- Web Audio API -->
+    <div class="api-section">
+      <h2>Web Audio</h2>
+      <button id="play-audio">Play Audio</button>
+    </div>
+
+    <!-- Fetch API -->
+    <div class="api-section">
+      <h2>Fetch API</h2>
+      <input type="text" id="fetch-url" placeholder="Enter a URL to fetch">
+      <button id="fetch-data">Fetch Data</button>
+      <p class="output" id="fetch-result">Fetched Data: </p>
+    </div>
+
+    <!-- History API -->
+    <div class="api-section">
+      <h2>History API</h2>
+      <button id="back-button">Go Back</button>
+      <button id="forward-button">Go Forward</button>
+    </div>
+
+    <!-- Offline API -->
+    <div class="api-section">
+      <h2>Offline API</h2>
+      <p id="offline-status">Online Status: </p>
+    </div>
+
+    <!-- Payment Request API -->
+    <div class="api-section">
+      <h2>Payment Request</h2>
+      <button id="make-payment">Make Payment</button>
+    </div>
+
+    <!-- Push API -->
+    <div class="api-section">
+      <h2>Push API</h2>
+      <button id="subscribe-push">Subscribe to Push Notifications</button>
+      <button id="send-push">Send Push Notification</button>
+    </div>
+
+    <!-- WebVR API -->
+    <div class="api-section">
+      <h2>WebVR</h2>
+      <button id="enter-vr">Enter VR Mode</button>
+    </div>
+
+    <!-- WebSocket API -->
+    <div class="api-section">
+      <h2>WebSocket</h2>
+      <button id="open-socket">Open WebSocket</button>
+      <button id="send-message">Send Message</button>
+      <button id="close-socket">Close WebSocket</button>
+      <p class="output" id="socket-result">WebSocket connection status will appear here.</p>
+    </div>
+
+    <!-- Proximity Sensor -->
+    <div class="api-section">
+      <h2>Proximity Sensor</h2>
+      <p id="proximity-data">Proximity data will appear here.</p>
+    </div>
+
+    <!-- Gyroscope Sensor -->
+    <div class="api-section">
+      <h2>Gyroscope Sensor</h2>
+      <p id="gyroscope-data">Gyroscope data will appear here.</p>
+    </div>
+
+    <!-- Accelerometer Sensor -->
+    <div class="api-section">
+      <h2>Accelerometer Sensor</h2>
+      <p id="accelerometer-data">Accelerometer data will appear here.</p>
+    </div>
+
+    <!-- Magnetometer Sensor -->
+    <div class="api-section">
+      <h2>Magnetometer Sensor</h2>
+      <p id="magnetometer-data">Magnetometer data will appear here.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
